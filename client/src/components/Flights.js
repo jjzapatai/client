@@ -28,14 +28,6 @@ const Flights = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //    socket.on('FLIGHTS', ({code, airline, origin, 
-  //     destination, plane, seats, passengers }) => { 
-  //      setFlight([flight, {code, airline, origin,
-  //        destination, plane, seats, passengers }])
-  //   }) 
-  // });
-
   const airplanePng = new Icon({
     iconUrl: plane,
     iconSize: [35,35],

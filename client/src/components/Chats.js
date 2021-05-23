@@ -38,7 +38,7 @@ const Chat = () => {
 		return chat.map(({ name, date, message }, index) => (
 			<div key={index}>
 				<h3>
-					{name}: {moment(new Date(date)).format('LLL')}:<span>{message}</span>
+					{name}: {moment(new Date(date)).format('MMMM Do YYYY, h:mm:ss a')}:<span>{message}</span>
 				</h3>
 			</div>
 		))
