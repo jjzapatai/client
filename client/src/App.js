@@ -3,7 +3,7 @@ import React from "react";
 // import {BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Flights from "./components/Flights.js";
-import Chats from "./components/Chats-socket.js";
+import Chats from "./components/Chats.js";
 
 //import './App.css';
 
