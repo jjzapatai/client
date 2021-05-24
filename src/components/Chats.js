@@ -73,3 +73,6 @@ const Chat = () => {
 }
 
 export default Chat;
+
+// basado en https://github.com/NikValdez/ChatAppTut
+// https://www.youtube.com/watch?v=CgV8omlWq2o
