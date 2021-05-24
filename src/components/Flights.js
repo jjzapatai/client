@@ -72,6 +72,7 @@ const Flights = () => {
         <p>Destino:         {vuelo.destination[0]} ; {vuelo.destination[1]}</p>
         <p>Avión:           {vuelo.plane}</p>
         <p>Número asientos: {vuelo.seats}</p>
+        <p>Pasajeros:</p>
         {vuelo.passengers.map((pasajero) => {
           return (
             <li>{pasajero.name}, edad:{pasajero.age} </li>
