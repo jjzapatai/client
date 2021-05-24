@@ -47,7 +47,7 @@ const Chat = () => {
   return (
 		<div className="card">
 			<form onSubmit={onMessageSubmit}>
-				<h2>Messenger</h2>
+				<h2>Chat</h2>
 				<div className="name-field">
 					<TextField name="name" onChange={(e) => onTextChange(e)} value={state.name} label="Name" />
 				</div>
@@ -64,7 +64,7 @@ const Chat = () => {
 				<button>Send Message</button>
 			</form>
 			<div className="render-chat">
-				<h2>Chat Log</h2>
+				<h2>Centro de Control</h2>
 				{renderChat()}
 			</div>
 			

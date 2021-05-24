@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { Icon } from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet'
 
-import plane from './icon/plane.svg'
+import plane from './icon/b.svg'
 import 'leaflet/dist/leaflet.css'
 import './leaflet.css'
 
@@ -30,7 +30,7 @@ const Flights = () => {
 
   const airplanePng = new Icon({
     iconUrl: plane,
-    iconSize: [35,35],
+    iconSize: [30,30],
     iconAnchor: null,
     shadowUrl: null,
     shadowSize: null,
@@ -62,13 +62,6 @@ const Flights = () => {
       <Polyline pathOptions={{ color: 'red' }} positions={multiPolyline} />
     )
   })}
-  
-  const renderPas = (pasajeros) => {
-    pasajeros.map((pasajero) => {
-    return (
-      <p>{pasajero.name}, edad:{pasajero.age} </p>
-    )
-  })}
 
   const renderInfo = () => {
 		return flight.map((vuelo) => (
@@ -79,9 +72,12 @@ const Flights = () => {
         <p>Destino:         {vuelo.destination[0]} ; {vuelo.destination[1]}</p>
         <p>Avión:           {vuelo.plane}</p>
         <p>Número asientos: {vuelo.seats}</p>
-        <div>
-          {renderPas(vuelo.passengers)}
-        </div>
+        {vuelo.passengers.map((pasajero) => {
+          return (
+            <li>{pasajero.name}, edad:{pasajero.age} </li>
+            )
+          })
+        }
 			</div>
 		))
   }
@@ -99,7 +95,7 @@ const Flights = () => {
       </MapContainer>      
     </div>
     <div className='flight-information-container'>
-      <h2>Flight Information</h2>
+      <h2>Información de vuelos</h2>
       {renderInfo()}
     </div>
     </div>
